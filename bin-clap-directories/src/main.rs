@@ -10,15 +10,15 @@ use std::process::exit;
 /// The reverse domain name notation of the application, excluding the
 /// organization or application name itself. An empty string can be passed if no
 /// qualifier should be used (only affects macOS).
-const QUALIFIER: &'static str = "";
+const QUALIFIER: &str = "";
 
 /// The name of the organization that develops this application, or for which
 /// the application is developed. An empty string can be passed if no
 /// organization should be used (only affects macOS and Windows).
-const ORGANIZATION: &'static str = "";
+const ORGANIZATION: &str = "";
 
 /// The name of the application itself.
-const APPLICATION: &'static str = env!("CARGO_PKG_NAME");
+const APPLICATION: &str = env!("CARGO_PKG_NAME");
 
 #[derive(Default, Deserialize)]
 struct Config {}
